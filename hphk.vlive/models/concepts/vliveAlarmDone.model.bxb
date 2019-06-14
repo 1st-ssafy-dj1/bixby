@@ -1,0 +1,3 @@
+structure (vliveAlarmDone) {
+  role-of (time.Date)
+}

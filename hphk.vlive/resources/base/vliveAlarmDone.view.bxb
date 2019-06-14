@@ -1,0 +1,14 @@
+input-view {
+  match: vliveAlarmDone (this)
+  
+  message (어느 날짜로 추가하시겠어요?)
+  
+  render {
+    calendar {
+      initial-value (now().date)
+      allow-range(false)
+    }
+  }
+  
+  
+}

@@ -1,0 +1,13 @@
+endpoints {
+  
+  action-endpoints {
+    action-endpoint (vliveResponse) {
+      // accepted-inputs (artist)
+      // accepted-inputs (name, type, minPrice, maxPrice)
+       // remote-endpoint ("http://django-env.ibkiuksqzh.us-west-2.elasticbeanstalk.com/api/v1/schedules/v-live/3/?format=json") {
+       // method (GET)
+       // }
+      local-endpoint (vliveResponse.js)
+    }
+  }
+}

@@ -1,0 +1,34 @@
+input-view {
+  match : vliveAlarm (this)
+
+ message ("일정을 추가할 녀석들을 골라주세요.")
+
+  render {
+    form {
+      elements {
+        checkbox {
+          id ("FirstAlarm")
+          primary-text (짜잔 첫번째 일정)
+          type (vliveAlarmChekced)
+          value ("#{raw(this[0].startAt)}")
+        }
+        checkbox {
+          id ("SecondAlarm")
+          primary-text (짜잔 두번째 일정)
+          type (vliveAlarmChekced)
+          value ("#{raw(this[1].startAt)}")
+        }
+        checkbox {
+          id ("ThirdAlarm")
+          primary-text (짜잔 세번째 일정)
+          type (vliveAlarmChekced)
+          value ("#{raw(this[2].startAt)}")
+        }
+      }
+      on-submit {
+        goal: vliveAlarmDone
+      }
+    }
+  }
+  
+}

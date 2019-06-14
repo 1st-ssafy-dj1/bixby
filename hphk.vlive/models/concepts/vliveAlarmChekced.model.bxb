@@ -1,0 +1,3 @@
+boolean (vliveAlarmChekced) {
+  description (__DESCRIPTION__)
+}

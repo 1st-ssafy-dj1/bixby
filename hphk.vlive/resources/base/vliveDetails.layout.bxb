@@ -1,0 +1,19 @@
+layout-macro-def (vliveDetails) {
+  params {
+    param (vliveInfo) {
+      type (vliveEvent)
+      min (Required) max (One)
+    }
+  }
+  content {
+    cell-card {
+      slot2 {
+        content {
+          order (PrimarySecondary)
+          primary ("#{value(vliveInfo.startAt)} | #{value(vliveInfo.title)}")
+          secondary ("#{value(vliveInfo.channel)}")
+        }
+      }
+    }
+  }
+}

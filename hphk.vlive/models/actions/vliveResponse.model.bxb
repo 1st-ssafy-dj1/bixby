@@ -1,0 +1,4 @@
+action (vliveResponse) {
+  description (__DESCRIPTION__)
+  output (vliveEvent)
+}

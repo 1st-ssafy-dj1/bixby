@@ -1,0 +1,6 @@
+train (t-r9b10xsy09vetqvg2z0yquivg) {
+  utterance ([g:vliveUpcoming] 브이라이브 가져와)
+  plan (Y2BkkMgoyMjWK8vJLEuFkKEFyfm5mXnpDCDACCIA)
+  enabled (false)
+  last-modified (1560342869307)
+}
