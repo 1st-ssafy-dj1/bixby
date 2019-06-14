@@ -1,0 +1,5 @@
+train (t-5rjoixs9sinzzno6sl2g54wcp) {
+  utterance ([g:vliveAlarmDoneDone] 일정에 등록해줘)
+  plan (Y2BkkM0oyMjWK8vJLEuFkI45iUW5Lvl5qSDMAAKMIAIA)
+  last-modified (1560500642000)
+}

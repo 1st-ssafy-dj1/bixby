@@ -1,0 +1,9 @@
+result-view {
+  match: vliveAlarmDoneDone(this)
+  app-launch {
+    payload-uri()
+    requires{
+      app-name(캘린더)
+    }
+  }
+}

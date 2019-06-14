@@ -7,8 +7,12 @@ input-view {
     calendar {
       initial-value (now().date)
       allow-range(false)
-    }
+    } 
   }
   
-  
+  conversation-drivers {
+    conversation-driver {
+      template("일정에 등록해줘")
+    }
+  }
 }
