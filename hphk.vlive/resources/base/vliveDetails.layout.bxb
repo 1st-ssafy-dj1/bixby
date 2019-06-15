@@ -7,6 +7,12 @@ layout-macro-def (vliveDetails) {
   }
   content {
     cell-card {
+       slot1 {
+        image {
+            url ("#{value(vliveInfo.imgUrl)}")
+            shape (Square)
+        }
+      }
       slot2 {
         content {
           order (PrimarySecondary)

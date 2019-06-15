@@ -1,5 +1,9 @@
 structure (vliveEvent) {
   description (__DESCRIPTION__)
+  property (artistName) {
+    type (artistName)
+    min (Optional) max (One)
+  }
   property (startAt) {
     type (startAt)
     min (Optional) max (One)
@@ -14,6 +18,6 @@ structure (vliveEvent) {
   }
   property (imgUrl) {
     type (imgUrl)
-    min (Optional) max (One)
+    min (Required) max (One)
   }
 }

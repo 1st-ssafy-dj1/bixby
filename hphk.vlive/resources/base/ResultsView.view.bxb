@@ -6,8 +6,8 @@ result-view {
   
   // Dialog
   message {
-    template ("#{value(this[0].channel)}의 일정을 찾아왔어요."){
-      speech ("#{value(this[0].channel)}의 방송일정입니다. 아래 결과를 확인해보세요")
+    template ("#{value(this.artistName)}의 일정을 찾아왔어요."){
+      speech ("#{value(this.artistName)}의 방송일정입니다. 아래 결과를 확인해보세요")
     }
   }
   
@@ -24,19 +24,11 @@ result-view {
     }
   }
   
-  followup {
-    prompt {
-      dialog ("방송 일정을 알림에 추가하시겠어요?")
-      on-confirm {
-        intent {
-          goal : vliveAlarm
-          value: vliveEvent$expr(this)
-        }
-      }
-      on-deny {
-        message (싫다구요? 알겠어요.)
-      }
+  //conversation-drivers
+  conversation-drivers {
+    conversation-driver {
+      template ("Vlive에서 보기")
+      
     }
   }
-  
 }

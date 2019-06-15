@@ -1,4 +1,9 @@
 action (vliveResponse) {
   description (__DESCRIPTION__)
+ collect {
+    input (artistName) {
+      type (artistName)
+    }
+  }
   output (vliveEvent)
 }
