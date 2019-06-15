@@ -25,10 +25,5 @@ result-view {
   }
   
   //conversation-drivers
-  conversation-drivers {
-    conversation-driver {
-      template ("Vlive에서 보기")
-      
-    }
-  }
+  
 }
