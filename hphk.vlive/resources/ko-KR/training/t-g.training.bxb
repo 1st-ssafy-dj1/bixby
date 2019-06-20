@@ -1,5 +1,6 @@
 train (t-g34x2ugmvtwlg0rjn96kwrvks) {
   utterance ("[g:vliveEvent] (아)[v:artistName]")
   plan (Y2BmEM0oyMjWK8vJLEuFkK5lqXklDBLowkGpxQX5ecWpKBoSi0oyi0v8EnNTGZgYGIGYAUgyMoAAEwQDAA==)
-  last-modified (1560768742669)
+  enabled (false)
+  last-modified (1561032204308)
 }

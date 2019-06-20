@@ -13,6 +13,7 @@ endpoints {
     
     // 발화 2) vlive에서 특정 가수의 비디오 목록 가져오기
     action-endpoint (vliveVideoSearch) {
+      accepted-inputs (artistVideo)
       local-endpoint (vliveVideoResponse.js)
     }
     

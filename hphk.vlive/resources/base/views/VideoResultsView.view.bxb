@@ -1,21 +1,21 @@
 // vliveEvent라는 아웃풋 값에 대한 result-view!!
 result-view {
-  match : vliveEvent(this)
+  match : vliveVideoEvent(this)
   
   // Dialog
   message {
-    template ("#{value(this.artistName)}의 일정을 찾아왔어요."){
-      speech ("#{value(this.artistName)}의 방송일정입니다. 아래 결과를 확인해보세요")
+    template ("#{value(this.artistVideo)}의 비디오를 찾아왔어요."){
+      speech ("#{value(this.artistVideo)}의 방송일정입니다. 아래 결과를 확인해보세요")
     }
   }
     render {
     if (size(this) > 1) {
       list-of (this) {
         has-details (true)
-        where-each (live) {
-          layout-macro (vliveDetails) {
-            param (vliveInfo) {
-              expression (live)
+        where-each (video) {
+          layout-macro (vliveVideos) {
+            param (vliveVideo) {
+              expression (video)
             }
           }
         }

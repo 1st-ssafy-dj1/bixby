@@ -1,5 +1,5 @@
-module.exports.function = function openBrowser (vliveEvent) {
+module.exports.function = function openBrowser (vliveVideoEvent) {
   const console = require('console');
 
-  return vliveEvent.imgUrl;
+  return vliveVideoEvent.videoUrl;
 }

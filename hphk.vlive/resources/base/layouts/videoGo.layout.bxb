@@ -1,0 +1,36 @@
+
+layout-macro-def (videoGo) {
+  params {
+    param (videoInfo) {
+      type (vliveVideoEvent)
+      min (Required) max (One)
+    }
+  }
+  content {
+    section{
+      content{
+         paragraph {
+          value {
+              template ("#{value(videoInfo.title)}")
+          }
+          style (Detail_L)
+        }
+        
+        input-cell {
+            label {
+                template ("앱에서 열기")
+            }
+            value {
+                template ("#{value(videoInfo.videoUrl)}")
+            }
+            on-click {
+                intent {
+                  goal: videoConnect
+                  value: $expr(videoInfo)
+                }
+            }
+        }
+      }
+    }
+  }
+}

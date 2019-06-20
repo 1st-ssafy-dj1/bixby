@@ -1,4 +1,4 @@
-structure (vliveVideoEvent) {
+structure (videoConnect) {
   description (vlive에서 특정 가수의 비디오 목록에 대한 요청 정보)
   property (artistVideo) {
     type (artistVideo)

@@ -1,0 +1,70 @@
+layout {
+  match: vliveVideoEvent (this)
+  mode (Details)
+
+  content {
+    section {
+      content {
+        layout-macro (vliveVideos) {
+          param (vliveVideo) { expression (this) }
+        }
+      }
+    }
+    
+    layout-macro (videoGo) {
+      param (videoInfo) {
+        expression (this)
+      }
+    }
+    section {
+      title (Title)
+      content {
+        paragraph {
+          value ("#{value(this.title)}")
+          style (Title_M)
+        }
+      }
+    }
+    section {
+      title (Channel)
+      content {
+        partitioned {
+          content {
+            paragraph {
+              value ("#{value(this.channel)}")
+              style (Detail_L)
+            }
+          }
+        }
+      }
+    }
+    section {
+      title (Start Time)
+      content {
+        partitioned {
+          content {
+            paragraph {
+              value ("#{value(this.startAt)}")
+              style (Detail_L)
+            }
+          }
+        }
+      }
+    }
+    section {
+      title (Video URL)
+      content {  
+        partitioned {
+          content {
+            paragraph {
+              value ("#{value(this.videoUrl)}")
+              style (Detail_L)
+
+            }
+          }
+        }
+      }
+      
+    }
+  }
+}
