@@ -1,5 +1,5 @@
 action (vliveResponse) {
-  description (__DESCRIPTION__)
+  description (vlive에서 특정 가수의 일정 목록을 가져옵니다.)
  collect {
     input (artistName) {
       type (artistName)

@@ -1,0 +1,5 @@
+train (t-z4zkf6o4fu65ec99aiqi1lprv) {
+  utterance ("[g:vliveVideoEvent] vlive에서 (가수)[v:artistName] 비디오 보여줘")
+  plan (Y2BmkMooyMjWK8vJLEuFkGGZKan5rmWpeSUM0ljlglMTi5IzGESRJBOLSjKLS/wSc1MZmBgYgZgBSDIygAATBAMA)
+  last-modified (1560768468303)
+}

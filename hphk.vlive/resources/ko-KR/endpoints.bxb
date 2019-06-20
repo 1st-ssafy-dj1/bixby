@@ -1,6 +1,7 @@
 endpoints {
   
   action-endpoints {
+    // 발화 1) vlive에서 특정 가수의 일정 목록 가져오기
     action-endpoint (vliveResponse) {
       // accepted-inputs (artist)
       // accepted-inputs (name, type, minPrice, maxPrice)
@@ -8,6 +9,16 @@ endpoints {
        // method (GET)
        // }
       local-endpoint (vliveResponse.js)
+    }
+    
+    // 발화 2) vlive에서 특정 가수의 비디오 목록 가져오기
+    action-endpoint (vliveVideoSearch) {
+      local-endpoint (vliveVideoResponse.js)
+    }
+    
+    action-endpoint (vliveScheduleDetail_Action) {
+      accepted-inputs (vliveEvent)
+      local-endpoint (OpenBrowser.js)
     }
   }
 }

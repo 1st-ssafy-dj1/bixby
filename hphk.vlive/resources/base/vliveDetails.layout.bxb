@@ -7,6 +7,12 @@ layout-macro-def (vliveDetails) {
   }
   content {
     cell-card {
+      on-click {
+        intent {
+          goal : vliveScheduleDetail_Action
+          value : $expr(vliveInfo)
+        }
+      }
        slot1 {
         image {
             url ("#{value(vliveInfo.imgUrl)}")

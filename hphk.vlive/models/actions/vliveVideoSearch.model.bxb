@@ -1,0 +1,10 @@
+action (vliveVideoSearch) {
+  description (vlive에서 특정 가수의 비디오 목록을 가져옵니다.)
+  collect {
+    input (artistName) {
+      type (artistName)
+      min (Optional) max (One)
+    }
+  }
+  output (vliveVideoEvent)
+}

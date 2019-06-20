@@ -1,0 +1,14 @@
+result-view {
+  match: imgUrl(this)
+  
+  message {
+    template (되나요? 제발)
+  }
+  
+   app-launch {
+    payload-uri ("https://money.cnn.com/2018/09/28/technology/facebook-breach-50-million/index.html")
+    
+    //어플리케이션 deeplink(URI) 사용시
+    //payload-mapper(inputMappers.js::searchRestaurant)
+  }
+}
