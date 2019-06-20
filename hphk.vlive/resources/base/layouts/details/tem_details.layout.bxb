@@ -1,0 +1,27 @@
+layout-macro-def (temDetails) {
+  params {
+    param (vliveInfo) {
+      type (vliveEvent)
+      min (Required) max (One)
+    }
+  }
+  content {
+    compound-card {
+      content {
+        image-card {
+          aspect-ratio (4:3)
+          image-url ("#{value(vliveInfo.imgUrl)}")
+          title-area {
+            halign (Start)
+            slot1 {
+              text {
+                value ("")
+                style (Title_M)
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

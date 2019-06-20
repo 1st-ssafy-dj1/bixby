@@ -1,0 +1,47 @@
+// vliveEvent라는 아웃풋 값에 대한 result-view!!
+result-view {
+  // vliveEvent 컨셉에 있는 정보를 이용한다. (action의 output 확인)
+  // vliveEvent 관련한 변수들은 this라는 이름으로 부른다,
+  match : vliveEvent(this)
+  
+  // Dialog
+  message {
+    template ("#{value(this.artistName)}의 일정을 찾아왔어요."){
+      speech ("#{value(this.artistName)}의 방송일정입니다. 아래 결과를 확인해보세요")
+    }
+  }
+  
+  // Layout
+  // render {
+  //   list-of (this) {
+  //     where-each (live) {
+  //       layout-macro (vliveDetails) {
+  //         param (vliveInfo) {
+  //           expression (live)
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+
+    render {
+    if (size(this) > 1) {
+      list-of (this) {
+        has-details (true)
+        where-each (live) {
+          layout-macro (vliveDetails) {
+            param (vliveInfo) {
+              expression (live)
+            }
+          }
+        }
+      }
+    }
+    else-if (size(this) == 1) {
+      layout-match (this) {
+        mode (Details)
+      }
+    }
+  }
+  
+}

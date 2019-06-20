@@ -14,7 +14,10 @@ module.exports.function = function vliveResponse (artistName) {
   // ArtistName ()== 가수명) 넣어주기
   ArtistInfo.forEach( each => {
     let tempResult = {}
-    tempResult.startAt = each.start_at
+    startAt = each.start_at
+    startAt = startAt.slice(0, 4) + '년 ' + startAt.slice(5, 7) + '월 ' + startAt.slice(8, 10) + '일 ' + startAt.slice(11, 13) + '시 ' + startAt.slice(14, 16) + '분'
+    tempResult.startAt = startAt
+    // tempResult.startAt = 
     tempResult.channel = each.channel
     tempResult.title   = each.title
     tempResult.imgUrl  = each.img_url
