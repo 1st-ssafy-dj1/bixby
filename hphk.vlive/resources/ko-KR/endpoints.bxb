@@ -19,7 +19,13 @@ endpoints {
     
     action-endpoint (vliveScheduleDetail_Action) {
       accepted-inputs (vliveEvent)
-      local-endpoint (OpenBrowser.js)
+      local-endpoint (openApp.js)
     }
+    
+   action-endpoint (openApp) {
+     accepted-inputs (vliveVideoEvent)
+     local-endpoint (openApp.js)
+   } 
+    
   }
 }

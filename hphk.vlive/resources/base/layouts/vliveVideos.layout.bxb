@@ -1,4 +1,4 @@
-// 리스트에서 출력되는 카드 레이아웃 설정
+// 리스트에서 출력되는 비디오 레이아웃 설정
 layout-macro-def (vliveVideos) {
   params {
     param (vliveVideo) {
@@ -47,7 +47,7 @@ layout-macro-def (vliveVideos) {
         single-line {
           text {
             value {
-              template ("얄리얄리얄리얄리 #{value(vliveVideo.videoUrl)}")
+              template ("#{value(vliveVideo.videoUrl)}")
             }
             style (Detail_M_Soft)
           }

@@ -1,13 +1,9 @@
 result-view {
-  match: videoConnect (this)
+  match: openApp (this)
   
   message(blahblah)
-  conversation-drivers{
-    conversation-driver{
-      template ("#{value(this)}")
-    }
+  
+  app-launch {
+    payload-uri ("#{value(this)}")
   }
-  // app-launch {
-  //   payload-uri ("#{value(this.videoUrl)}")
-  // }
 }

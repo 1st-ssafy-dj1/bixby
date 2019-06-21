@@ -1,4 +1,3 @@
-
 layout-macro-def (videoGo) {
   params {
     param (videoInfo) {
@@ -25,7 +24,8 @@ layout-macro-def (videoGo) {
             }
             on-click {
                 intent {
-                  goal: videoConnect
+                  // goal: videoConnect
+                  goal: openApp
                   value: $expr(videoInfo)
                 }
             }

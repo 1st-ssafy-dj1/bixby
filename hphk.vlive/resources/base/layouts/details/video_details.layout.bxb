@@ -1,3 +1,4 @@
+// 영상 목록에서 하나 클릭헀을 때 나오는 상세정보 화면
 layout {
   match: vliveVideoEvent (this)
   mode (Details)
@@ -11,60 +12,62 @@ layout {
       }
     }
     
+    // videoGo.layout.bxb 파일에 정의되어있는 layout-marcro-def 레이아웃을 출력한다.
     layout-macro (videoGo) {
       param (videoInfo) {
         expression (this)
       }
     }
-    section {
-      title (Title)
-      content {
-        paragraph {
-          value ("#{value(this.title)}")
-          style (Title_M)
-        }
-      }
-    }
-    section {
-      title (Channel)
-      content {
-        partitioned {
-          content {
-            paragraph {
-              value ("#{value(this.channel)}")
-              style (Detail_L)
-            }
-          }
-        }
-      }
-    }
-    section {
-      title (Start Time)
-      content {
-        partitioned {
-          content {
-            paragraph {
-              value ("#{value(this.startAt)}")
-              style (Detail_L)
-            }
-          }
-        }
-      }
-    }
-    section {
-      title (Video URL)
-      content {  
-        partitioned {
-          content {
-            paragraph {
-              value ("#{value(this.videoUrl)}")
-              style (Detail_L)
-
-            }
-          }
-        }
-      }
-      
-    }
+    
+    // section {
+    //   title (Title)
+    //   content {
+    //     paragraph {
+    //       value ("#{value(this.title)}")
+    //       style (Title_M)
+    //     }
+    //   }
+    // }
+    // section {
+    //   title (Channel)
+    //   content {
+    //     partitioned {
+    //       content {
+    //         paragraph {
+    //           value ("#{value(this.channel)}")
+    //           style (Detail_L)
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
+    // section {
+    //   title (Start Time)
+    //   content {
+    //     partitioned {
+    //       content {
+    //         paragraph {
+    //           value ("#{value(this.startAt)}")
+    //           style (Detail_L)
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
+//     
+//     section {
+//       title (Video URL)
+//       content {  
+//         partitioned {
+//           content {
+//             paragraph {
+//               value ("#{value(this.videoUrl)}")
+//               style (Detail_L)
+// 
+//             }
+//           }
+//         }
+//       }   
+//     }
   }
 }
