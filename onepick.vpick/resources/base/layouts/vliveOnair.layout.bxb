@@ -1,0 +1,41 @@
+layout-macro-def (vliveOnairs) {
+  params {
+    param (vliveOnair) {
+      type (vliveOnair)
+      min (Required) max (One)
+    }
+  }
+  content {
+    thumbnail-card {
+      image-position (End)
+      image-url ("#{value(vliveOnair.imgUrl)}")
+      title-area {
+        halign (Start)
+        slot1 {
+          text {
+            value ("#{value(vliveOnair.title)}")
+            style (Title_XS)
+          }
+        }
+        slot2 {
+          paragraph {
+            value {
+              template ("#{value(vliveOnair.channel)}")
+            }
+            style (Detail_L_Soft)
+          }
+        }
+        slot3 {
+          single-line {
+            text {
+              value {
+                template ("#{value(vliveOnair.startAt)}")
+              }
+              style (Detail_M_Soft)
+            }
+          }
+        }
+      }
+    }
+  }
+}

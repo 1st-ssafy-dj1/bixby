@@ -1,0 +1,53 @@
+layout-macro-def (videoOnairGo) {
+  params {
+    param (vliveOnair) {
+      type (vliveOnair)
+      min (Required) max (One)
+    }
+  }
+  content {
+    section{
+      title {
+        template ("#{value(vliveOnair.channel)}")
+      }
+      content{
+        single-line {
+          text {
+            value ("#{value(vliveOnair.title)}")
+            style (Detail_L)
+          }
+        }
+        
+        single-line {
+          text {
+            value ("　　")
+            style (Detail_L)
+          }
+        }
+        
+        
+        single-line {
+          text {
+            value ("\n#{value(vliveOnair.channel)}님의 방송은 #{value(vliveOnair.startAt)}에 시작했어요.")
+            style (Detail_M_Soft)
+          }
+        }
+        
+        input-cell {
+          label {
+            template ("　　　　　 　　Click to watch the live :)")
+
+          }
+          on-click {
+                intent {
+                  // goal: videoConndect
+                  goal: openOnair
+                  value: $expr(vliveOnair)
+                }
+            }
+        }
+
+      }
+    }
+  }
+}

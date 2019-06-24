@@ -1,0 +1,21 @@
+capsule {
+  id (onepick.vpick)
+  version (1.0.1) // Removed warnings
+  format(3)
+  targets {
+    target (bixby-mobile-ko-KR)
+  }
+  capsule-imports {
+    import (viv.core) { 
+      as (core) 
+    }
+    import (viv.time) {
+      as (time)
+      version(2.85.1)
+    }
+  }
+  store-sections {
+    section (MoviesAndTV)
+    section (ArtAndLifestyle)
+  }
+}

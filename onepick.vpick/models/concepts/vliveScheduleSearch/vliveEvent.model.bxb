@@ -1,0 +1,23 @@
+structure (vliveEvent) {
+  description (__DESCRIPTION__)
+  property (artistName) {
+    type (artistName)
+    min (Optional) max (One)
+  }
+  property (startAt) {
+    type (startAt)
+    min (Optional) max (One)
+  }
+  property (channel) {
+    type (channel)
+    min (Optional) max (One)
+  }
+  property (title) {
+    type (title)
+    min (Optional) max (One)
+  }
+  property (imgUrl) {
+    type (imgUrl)
+    min (Required) max (One)
+  }
+}

@@ -1,0 +1,9 @@
+action (vliveFindOnair) {
+  description (vlive에서 생방송 리스트를 가져옵니다.)
+ collect {
+    input (vliveOnair) {
+      type (vliveOnair)
+    }
+  }
+  output (vliveOnair)
+}

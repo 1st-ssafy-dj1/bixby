@@ -1,0 +1,11 @@
+action (vliveScheduleDetail_Action) {
+  description (__DESCRIPTION__)
+  type(Constructor)
+  collect {
+    input (vliveEvent) {
+      type (vliveEvent)
+      min (Required) max (One)
+    }
+  }
+  output (imgUrl)
+}

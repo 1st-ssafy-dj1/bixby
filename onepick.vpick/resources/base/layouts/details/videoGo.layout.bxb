@@ -1,0 +1,73 @@
+layout-macro-def (videoGo) {
+  params {
+    param (videoInfo) {
+      type (vliveVideoEvent)
+      min (Required) max (One)
+    }
+  }
+  content {
+    section{
+      title {
+        template ("#{value(videoInfo.channel)}")
+      }
+      content{
+        single-line {
+          text {
+            value ("#{value(videoInfo.title)}")
+            style (Detail_M)
+          }
+        }
+        
+        single-line {
+          text {
+            value ("　　")
+            style (Detail_M)
+          }
+        }
+        
+        
+        input-cell {
+          label {
+            template ("　　　　　 　　Click to watch the video :)")
+
+          }
+          on-click {
+                intent {
+                  // goal: videoConndect
+                  goal: openApp
+                  value: $expr(videoInfo)
+                }
+            }
+        }
+
+      }
+    }
+    
+    section {
+      title (Channel)
+      content {
+        paragraph {
+          value {
+            template ("#{value(videoInfo.channel)}")
+          }
+          style (Detail_L_Soft)
+        }
+        input-cell {
+            label {
+                template ("Click to watch video")
+            }
+          //  value {
+          //      template ("#{value(videoInfo.videoUrl)}")
+          //  }
+            on-click {
+                intent {
+                  // goal: videoConndect
+                  goal: openApp
+                  value: $expr(videoInfo)
+                }
+            }
+        }
+      }
+    }
+  }
+}

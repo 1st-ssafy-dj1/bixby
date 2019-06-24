@@ -1,0 +1,21 @@
+// 온에어서 목록에서 하나 클릭헀을 때 나오는 상세정보 화면
+layout {
+  match: vliveOnair (this)
+  mode (Details)
+  content {
+    section {
+      content {
+        layout-macro (temOnair) {
+          param (vliveOnair) { expression (this) }
+        }
+      }
+    }
+    
+    // videoGo.layout.bxb 파일에 정의되어있는 layout-marcro-def 레이아웃을 출력한다.
+    layout-macro (videoOnairGo) {
+      param (vliveOnair) {
+        expression (this)
+      }
+    }
+  }
+}

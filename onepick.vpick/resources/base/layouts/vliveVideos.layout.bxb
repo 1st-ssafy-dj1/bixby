@@ -1,0 +1,58 @@
+// 리스트에서 출력되는 비디오 레이아웃 설정
+layout-macro-def (vliveVideos) {
+  params {
+    param (vliveVideo) {
+      type (vliveVideoEvent)
+      min (Required) max (One)
+    }
+  }
+  content {
+    compound-card {
+      content {
+        image-card {
+          aspect-ratio (4:3)
+          image-url ("#{value(vliveVideo.imgUrl)}")
+          title-area {
+            halign (Start)
+            slot1 {
+              text {
+                value ("")
+                style (Title_XS)
+              }
+            }
+          }
+        }
+        single-line {
+          text {
+            value {
+              template ("#{value(vliveVideo.title)}")
+            }
+            style (Detail_L)
+          }
+        }
+        paragraph {
+          value {
+            template ("#{value(vliveVideo.startAt)}")
+          }
+          style (Detail_L)
+        }
+        single-line {
+          text {
+            value {
+              template ("#{value(vliveVideo.channel)}")
+            }
+            style (Detail_M_Soft)
+          }
+        }
+        // single-line {
+        //   text {
+        //     value {
+        //       template ("#{value(vliveVideo.videoUrl)}")
+        //     }
+        //     style (Detail_M_Soft)
+        //   }
+        // }
+      }
+    }
+  }
+}

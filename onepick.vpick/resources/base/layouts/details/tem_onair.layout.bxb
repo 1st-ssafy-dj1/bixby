@@ -1,0 +1,27 @@
+layout-macro-def (temOnair) {
+  params {
+    param (vliveOnair) {
+      type (vliveOnair)
+      min (Required) max (One)
+    }
+  }
+  content {
+    compound-card {
+      content {
+        image-card {
+          aspect-ratio (4:3)
+          image-url ("#{value(vliveOnair.imgUrl)}")
+          title-area {
+            halign (Start)
+            slot1 {
+              text {
+                value ("")
+                style (Title_M)
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

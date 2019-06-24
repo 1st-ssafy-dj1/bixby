@@ -1,0 +1,43 @@
+// vliveEvent라는 아웃풋 값에 대한 result-view!!
+result-view {
+  match : vliveOnair(this)
+  
+  // Dialog
+  message {
+    template ("V LIVE 생방송 목록이에요."){
+      speech ("아래 결과를 확인해보세요.")
+    }
+  }
+    render {
+    if (size(this) > 1) {
+      list-of (this) {
+        has-details (true)
+        where-each (list) {
+          layout-macro (vliveOnairs) {
+            param (vliveOnair) {
+              expression (list)
+            }
+          }
+        }
+      }
+    }
+    else-if (size(this) == 1) {
+      layout-match (this) {
+        mode (Details)
+      }
+    }
+  }
+  
+  // conversation-drivers {
+  //   if ("size(this) > 20") {
+  //     conversation-driver {
+  //       template-macro (moreVideos) {
+  //         param (vliveVideoEvent) {
+  //           expression (this)
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+  
+}

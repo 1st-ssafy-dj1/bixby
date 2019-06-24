@@ -1,0 +1,18 @@
+description {
+  displayName (V-PICK)
+  companyName (onepick)
+  iconUrl (/images/vpicklogo.png)
+  description ("V-Live에서 특정 아이돌의 방송일정, 영상을 찾아주는 capsule 입니다")
+  // websiteUrl (https://example.com/)
+  // termsUrl (https://example.com/terms-of-use/)
+  search-keywords {
+    keyword (vlive)
+    keyword (v live)
+    keyword (v-live)
+    keyword (브이라이브)
+    keyword (아이돌)
+    keyword (아이돌 일정)
+    keyword (팬)
+  }
+  dispatch-name (브이픽)
+}

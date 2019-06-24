@@ -1,0 +1,23 @@
+structure (vliveOnair) {
+  description (vlive에서 생방송 중인 방송 정보)
+  property (startAt) {
+    type (startAt)
+    min (Optional) max (One)
+  }
+  property (channel) {
+    type (channel)
+    min (Optional) max (One)
+  }
+  property (title) {
+    type (title)
+    min (Optional) max (One)
+  }
+  property (imgUrl) {
+    type (imgUrl)
+    min (Required) max (One)
+  }
+  property (videoUrl) {
+    type (videoUrl)
+    min (Required) max (One)
+  }
+}

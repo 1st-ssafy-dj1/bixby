@@ -1,0 +1,11 @@
+action (openOnair) {
+  description (URL을 통하여 app-lauch를 실행하는 action입니다)
+  type(Constructor)
+  collect {
+    input (vliveOnair) {
+      type (vliveOnair)
+      min (Required) max (One)
+    }
+  }
+  output (videoUrl)
+}

@@ -1,0 +1,27 @@
+structure (videoConnect) {
+  description (vlive에서 특정 가수의 비디오 목록에 대한 요청 정보)
+  property (artistVideo) {
+    type (artistVideo)
+    min (Optional) max (One)
+  }
+  property (startAt) {
+    type (startAt)
+    min (Optional) max (One)
+  }
+  property (channel) {
+    type (channel)
+    min (Optional) max (One)
+  }
+  property (title) {
+    type (title)
+    min (Optional) max (One)
+  }
+  property (imgUrl) {
+    type (imgUrl)
+    min (Required) max (One)
+  }
+  property (videoUrl) {
+    type (videoUrl)
+    min (Required) max (One)
+  }
+}

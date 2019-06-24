@@ -1,0 +1,21 @@
+// 영상 목록에서 하나 클릭헀을 때 나오는 상세정보 화면
+layout {
+  match: vliveVideoEvent (this)
+  mode (Details)
+  content {
+    section {
+      content {
+        layout-macro (temVideo) {
+          param (vliveVideo) { expression (this) }
+        }
+      }
+    }
+    
+    // videoGo.layout.bxb 파일에 정의되어있는 layout-marcro-def 레이아웃을 출력한다.
+    layout-macro (videoGo) {
+      param (videoInfo) {
+        expression (this)
+      }
+    }
+  }
+}

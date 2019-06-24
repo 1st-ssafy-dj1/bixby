@@ -1,0 +1,27 @@
+layout-macro-def (temVideo) {
+  params {
+    param (vliveVideo) {
+      type (vliveVideoEvent)
+      min (Required) max (One)
+    }
+  }
+  content {
+    compound-card {
+      content {
+        image-card {
+          aspect-ratio (4:3)
+          image-url ("#{value(vliveVideo.imgUrl)}")
+          title-area {
+            halign (Start)
+            slot1 {
+              text {
+                value ("")
+                style (Title_M)
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+result-view {
+  match: videoUrl (this)
+  
+  message()
+  
+  app-launch {
+    payload-uri ("#{value(this)}")
+    requires{
+      app-name(V LIVE)
+    }
+  }
+}

@@ -1,0 +1,49 @@
+layout {
+  match: vliveEvent (this)
+  mode (Details)
+
+  content {
+    section {
+      content {
+        layout-macro (temDetails) {
+          param (vliveInfo) { expression (this) }
+        }
+      }
+    }
+    section {
+      title (Title)
+      content {
+        paragraph {
+          value ("#{value(this.title)}")
+          style (Title_XS)
+        }
+      }
+    }
+    section {
+      title (Channel)
+      content {
+        partitioned {
+          content {
+            paragraph {
+              value ("#{value(this.channel)}")
+              style (Title_XS)
+            }
+          }
+        }
+      }
+    }
+    section {
+      title (Start Time)
+      content {
+        partitioned {
+          content {
+            paragraph {
+              value ("#{value(this.startAt)}")
+              style (Title_XS)
+            }
+          }
+        }
+      }
+    }
+  }
+}
