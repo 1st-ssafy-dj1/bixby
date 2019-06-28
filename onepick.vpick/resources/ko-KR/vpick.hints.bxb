@@ -1,7 +1,7 @@
 hints {
   uncategorized {
     utterance (생방송 알려줘)
-    utterance (bts 동영상 보여줘)
+    utterance (bts 비디오 보여줘)
     utterance (아이즈 일정 알려줘)
   }
 }

@@ -15,4 +15,7 @@ description {
     keyword (팬)
   }
   dispatch-name (브이픽)
+  dispatch-aliases {
+    alias (브이 픽)
+  }
 }

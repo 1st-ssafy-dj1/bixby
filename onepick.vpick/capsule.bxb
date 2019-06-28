@@ -1,6 +1,6 @@
 capsule {
   id (onepick.vpick)
-  version (1.0.1) // Removed warnings
+  version (1.0.5) // Removed warnings
   format(3)
   targets {
     target (bixby-mobile-ko-KR)
